@@ -102,7 +102,7 @@ flutter:
   fonts:
     - family: Tajawal
       fonts:
-        - asset: assets/fonts/Tajawal/Tajawal-Light.ttf
+        - asset: assets/fonts/Tajawal/Tajawal-Regular.ttf
 
   #         style: italic
     - family: MuseoModerno
