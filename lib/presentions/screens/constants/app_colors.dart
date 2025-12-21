@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // الألوان الرئيسية
-  static const Color backgroundScaffold=Color(0xFF1E293B); // اللون الأزرق الداكن للخلفية
+  static const Color backgroundScaffold=Color(0xFF26396B); // اللون الأزرق الداكن للخلفية
   static const Color darkBlue = Color(0xFF1E293B); // لون البطاقات
   static const Color mangoYellow = Color(0xFFFBBF24); // اللون الأصفر الكهرماني
   static const Color lightGrey = Color(0xFFCBD5E1); // لون داخلي خفيف
