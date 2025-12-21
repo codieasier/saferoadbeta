@@ -1,0 +1,11 @@
+flutter_native_splash:
+  color: "#26396B"
+  color_dark: "#0F172B"
+  image: assets/logo/Group.png
+
+
+  android_12:
+    color: "#26396B"
+    color_dark: "#272727"
+    image: assets/logo/Group.png
+  web: false
