@@ -35,17 +35,11 @@ class AppTextStyles {
     color: Colors.white,
     fontWeight: FontWeight.w500,
   );
+ static const TextStyle question= TextStyle(
+   fontSize: 18,
+       fontWeight:FontWeight.w600,
+     fontFamily: 'Tajawal',
+     color: AppColors.black
+ );
 
-  static const TextStyle progressNumber = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 55,
-    fontWeight: FontWeight.bold,
-    color: AppColors.progressText,
-  );
-
-  static const TextStyle navActive = TextStyle(
-    fontFamily: fontFamily,
-    fontSize: 12,
-    color: AppColors.mangoYellow,
-  );
 }

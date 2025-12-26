@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:saferoadbeta/core/resources/quizQuestions.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
+
+import '../widgets/custom_question_title.dart';
+import '../widgets/quiz_circleindicator.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({super.key});
@@ -38,22 +42,17 @@ final  int  currentq = 7;
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+             const SizedBox(height: 70,),
               Stack(
+                clipBehavior: Clip.none,
                 children: [
-                  CircularPercentIndicator(
 
-
-                    backgroundColor: AppColors.mangoYellow.withAlpha(40),
-                    animation: true,
-                    animationDuration: 30000,
-                    circularStrokeCap: CircularStrokeCap.round,
-
-                    radius: 43.0,
-                    lineWidth: 9.0,
-                    percent:1.0,
-                    center:  Text("30",style: AppTextStyles.bodyLarge,),
-                    progressColor: AppColors.mangoYellow,
-                  ),
+                  CustomQuestionTitle(textquestion: 'السؤال الأول',)
+                  ,const  Positioned(
+                    right: 0,
+                      left: 0,
+                      top:-40 ,
+                      child: CustomCirclePercentIndicator(duration: '30',)),
 
                 ],
 

@@ -13,9 +13,10 @@ class AppColors {
   static const Color gradientEnd = Color(0xFF334155);
 
   // لون شريط التقدم الدائري
-  static const Color progressBackground = Color(0xFF334155);
-  static const Color progressForeground = Colors.white;
-  static const Color progressText = Colors.white;
+  static const Color progressBackground =Colors.white;
+  static const Color progressForeground = mangoYellow;
+  static const Color progressText = Colors.black;
+  static const Color black=Colors.black;
 
   static const gradient= BoxDecoration( gradient: LinearGradient(
   begin: Alignment.topCenter,
