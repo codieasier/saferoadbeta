@@ -18,6 +18,7 @@ class AppColors {
   static const Color progressText = Colors.black;
   static const Color black=Colors.black;
 
+  static const Color white=Colors.white;
   static const gradient= BoxDecoration( gradient: LinearGradient(
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,

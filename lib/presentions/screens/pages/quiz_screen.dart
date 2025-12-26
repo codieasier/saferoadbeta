@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:saferoadbeta/core/resources/quizQuestions.dart';
+import 'package:saferoadbeta/presentions/screens/widgets/custom_radio_quiz_items.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
@@ -57,6 +58,12 @@ final  int  currentq = 7;
                 ],
 
               )
+              ,SizedBox(height: 70,),
+              Custom_radio_quiz(),
+              Custom_radio_quiz(),
+
+              Custom_radio_quiz()
+
             ],
           ),
         ),
