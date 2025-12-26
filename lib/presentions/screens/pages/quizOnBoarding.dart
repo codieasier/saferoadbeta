@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:saferoadbeta/controller/qonBoardingcontrol.dart';
 import 'package:saferoadbeta/core/resources/appStrings.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_colors.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_text_styles.dart';
 import 'package:saferoadbeta/presentions/screens/pages/quizpage.dart';
+
+
 
 import '../widgets/custombuttonQuiz.dart';
 
@@ -27,6 +30,7 @@ class Quizonboarding extends StatelessWidget {
             SizedBox(height: 10,),
             custombuttonquiz(onPressed: (){
               Navigator.push(context,MaterialPageRoute(builder: (context)=> const QuizPage()));
+
 
             }
 

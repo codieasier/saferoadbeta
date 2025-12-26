@@ -1,3 +1,3 @@
-class Strings{
-  static const String startquiz='إبدأ الاختبار';
+class Strings {
+  static const String startquiz = 'إبدأ الاختبار';
 }

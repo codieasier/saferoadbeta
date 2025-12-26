@@ -29,6 +29,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static const TextStyle bodyMed = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 14,
+    color: Colors.white,
+    fontWeight: FontWeight.w500,
+  );
+
   static const TextStyle progressNumber = TextStyle(
     fontFamily: fontFamily,
     fontSize: 55,
