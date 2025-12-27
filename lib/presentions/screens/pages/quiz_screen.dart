@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:saferoadbeta/core/resources/quizQuestions.dart';
+import 'package:saferoadbeta/core/quizQuestions/quizQuestions.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/custom_radio_quiz_items.dart';
 
 import '../constants/app_colors.dart';
@@ -10,11 +10,24 @@ import '../constants/app_text_styles.dart';
 import '../widgets/custom_question_title.dart';
 import '../widgets/quiz_circleindicator.dart';
 
-class QuizScreen extends StatelessWidget {
+class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
 
+  @override
+  State<QuizScreen> createState() => _QuizScreenState();
+}
+
+class _QuizScreenState extends State<QuizScreen> {
  final int  totalq = 10;
+
 final  int  currentq = 7;
+late QuizScreenController _quizScreenController;
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _quizScreenController=QuizScreenController();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,31 +53,37 @@ final  int  currentq = 7;
         padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 10),
         child: Container(
           width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-             const SizedBox(height: 70,),
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+               const SizedBox(height: 70,),
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+            
+                    CustomQuestionTitle(textquestion: 'السؤال الأول',)
+                    ,const  Positioned(
+                      right: 0,
+                        left: 0,
+                        top:-40 ,
+                        child: CustomCirclePercentIndicator(duration: '30',)),
+            
+                  ],
+            
+                )
+                ,SizedBox(height: 70,),
+                ListView.separated(
+                  physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemBuilder:(context,index)=>Custom_radio_quiz() ,
+                    separatorBuilder: (context,index)=>SizedBox(height: 25,) ,
+                    itemCount: _quizScreenController.option.length),
 
-                  CustomQuestionTitle(textquestion: 'السؤال الأول',)
-                  ,const  Positioned(
-                    right: 0,
-                      left: 0,
-                      top:-40 ,
-                      child: CustomCirclePercentIndicator(duration: '30',)),
-
-                ],
-
-              )
-              ,SizedBox(height: 70,),
-              Custom_radio_quiz(),
-              Custom_radio_quiz(),
-
-              Custom_radio_quiz()
-
-            ],
+            
+            
+              ],
+            ),
           ),
         ),
       ),

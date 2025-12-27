@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saferoadbeta/core/resources/quizQuestions.dart';
+import 'package:saferoadbeta/core/quizQuestions/quizQuestions.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_colors.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_text_styles.dart';
 import 'package:percent_indicator/percent_indicator.dart';
