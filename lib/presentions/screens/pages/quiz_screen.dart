@@ -8,6 +8,7 @@ import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
 
 import '../widgets/custom_question_title.dart';
+import '../widgets/custum_listview_options_quiz_screen.dart';
 import '../widgets/quiz_circleindicator.dart';
 
 class QuizScreen extends StatefulWidget {
@@ -73,12 +74,7 @@ late QuizScreenController _quizScreenController;
             
                 )
                 ,SizedBox(height: 70,),
-                ListView.separated(
-                  physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemBuilder:(context,index)=>Custom_radio_quiz() ,
-                    separatorBuilder: (context,index)=>SizedBox(height: 25,) ,
-                    itemCount: _quizScreenController.option.length),
+                custon_Listview_options(itemCount: _quizScreenController.option.length, )
 
             
             
