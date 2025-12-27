@@ -74,7 +74,7 @@ late QuizScreenController _quizScreenController;
             
                 )
                 ,SizedBox(height: 70,),
-                custon_Listview_options(itemCount: _quizScreenController.option.length, )
+                custon_Listview_options(itemCount: _quizScreenController.option.length,option:_quizScreenController.option , )
 
             
             
