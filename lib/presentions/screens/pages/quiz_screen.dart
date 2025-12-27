@@ -30,6 +30,10 @@ late QuizScreenController _quizScreenController;
     _quizScreenController=QuizScreenController();
   }
   @override
+  void onDispose(){
+  _quizScreenController.onDispose();
+  super.dispose();
+  }
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -74,7 +78,13 @@ late QuizScreenController _quizScreenController;
             
                 )
                 ,SizedBox(height: 70,),
-                custon_Listview_options(itemCount: _quizScreenController.option.length,option:_quizScreenController.option , )
+                custon_Listview_options(
+                  onTap: (indexValue){
+                    _quizScreenController.onTapAtItemRadio(indexValue);
+                  },
+                  outputdataGroupValueRadio:  _quizScreenController.outputDataGroupValueIndex,
+                  itemCount: _quizScreenController.option.length,
+                  option:_quizScreenController.option , )
 
             
             
