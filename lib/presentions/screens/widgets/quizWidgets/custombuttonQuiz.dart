@@ -30,7 +30,7 @@ final VoidCallback? onPressed;
 
 
 
-          child: Text(Strings.startquiz,style: AppTextStyles.bodyLarge,textAlign: TextAlign.center,)),
+          child: Text(StringsValues.startquiz,style: AppTextStyles.bodyLarge,textAlign: TextAlign.center,)),
     );
   }
 }

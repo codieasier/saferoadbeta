@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:saferoadbeta/controller/quizQuestions.dart';
+import 'package:saferoadbeta/controller/quiz_controller.dart';
+import 'package:saferoadbeta/core/resources/appStrings.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_navigation_button.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_radio_quiz_items.dart';
 
@@ -50,7 +51,7 @@ late QuizScreenController _quizScreenController;
           child: Row(children: [Icon(Icons.arrow_back_ios,color:AppColors.white,), Text("السابق",style: AppTextStyles.bodyMed,)],),
         ),
         ),
-          title: Text('السؤال $currentq من $totalq',style: AppTextStyles.bodyLarge, ),
+          title: Text(StringsValues.page+currentq.toString()+StringsValues.from+totalq.toString(),style: AppTextStyles.bodyLarge, ),
           centerTitle: true,
           backgroundColor:AppColors.backgroundScaffold ,
 
@@ -98,7 +99,7 @@ late QuizScreenController _quizScreenController;
       CustomNavigationButton(
 
           onPressed: (){},
-          isActiveOutputStream:_quizScreenController.isActiveOutputStream ),
+          isActiveOutputStream:_quizScreenController.isActiveOutputStream, text:StringsValues.knextquestion, ),
 
     );
   }
