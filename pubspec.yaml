@@ -83,6 +83,9 @@ flutter:
     - assets/images/softlight.png
     - assets/images/driverimage.png
     - assets/images/drivingTest.png
+    - assets/images/trafficSigns/exclamation-mark.png
+    - assets/images/trafficSigns/forbidden.png
+    - assets/images/trafficSigns/stop.png
 
 
 

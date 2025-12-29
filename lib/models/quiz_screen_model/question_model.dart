@@ -1,20 +1,20 @@
 class QuestionModel{
 
  late String _question ;
- late List<dynamic> _listanswers =[];
+  late List<dynamic> _listAnswers =[];
   dynamic _correctAnswer;
   QuestionModel(
-      {required String question, required List<dynamic> listanswers, required correctAnswer })
+      {required String question, required List<dynamic> listAnswers, required correctAnswer })
   {
     _question=question;
-    _listanswers=listanswers;
+    _listAnswers=listAnswers;
     _correctAnswer=correctAnswer;
   }
 
- List<dynamic> get listanswers => _listanswers;
+ List<dynamic> get listAnswers => _listAnswers;
 
-  set listanswers(List<dynamic> value) {
-    _listanswers = value;
+  set listAnswers(List<dynamic> value) {
+    _listAnswers = value;
   }
 
   String get question => _question;

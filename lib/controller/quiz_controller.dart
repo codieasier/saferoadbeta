@@ -2,7 +2,7 @@ import 'dart:async';
 
 class QuizScreenController {
   List<String> option=[
-    'الاجابة','14','53','clear','none','23'
+    'توقف','استمر ببطىء', 'توقف عند إشارة المرور القادمة', 'توقف لركن السيارة'
 
   ];
   int groupValueindex=-1;

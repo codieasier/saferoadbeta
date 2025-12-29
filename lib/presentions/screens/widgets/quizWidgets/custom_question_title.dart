@@ -6,17 +6,26 @@ import '../../constants/app_text_styles.dart';
 
 class CustomQuestionTitle extends StatelessWidget {
   const CustomQuestionTitle({
-    super.key, required this.textquestion,
+    super.key, required this.textquestion, required this.imagePath,
   });
 final String textquestion;
+final String imagePath;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 229,
       alignment: Alignment.center,
-      padding: EdgeInsets.all(8),
-      child: Text(textquestion,style: AppTextStyles.question,),
+      padding: EdgeInsets.only(top: 70),
+      child: Column(
+        children: [
+          Text(textquestion,style: AppTextStyles.question,),
+          Container(
+              height: 60,
+              width: 60,
+              child: Image.asset(imagePath))
+        ],
+      ),
 
 
       decoration: BoxDecoration(

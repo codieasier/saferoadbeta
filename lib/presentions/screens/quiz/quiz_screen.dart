@@ -69,7 +69,8 @@ late QuizScreenController _quizScreenController;
                   clipBehavior: Clip.none,
                   children: [
             
-                    CustomQuestionTitle(textquestion: 'السؤال الأول',)
+                    CustomQuestionTitle(textquestion: ' ماذا تعني هذه العلامة؟ش',
+                    imagePath: 'assets/images/trafficSigns/stop.png',)
                     ,const  Positioned(
                       right: 0,
                         left: 0,

@@ -1,5 +1,11 @@
+import 'package:saferoadbeta/models/quiz_screen_model/question_model.dart';
+
 class ConstValues{
-  static List<String> questions=['kf'];
+  static List<QuestionModel> questionsList=[
+    QuestionModel(question: 'ما هي إشارة التوقف؟',
+        listAnswers: [],
+        correctAnswer: '')
+  ];
 }
 
 
