@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../core/quizQuestions/quizQuestions.dart';
+import '../../../../controller/quizQuestions.dart';
 import 'custom_radio_quiz_items.dart';
 
 class custon_Listview_options extends StatelessWidget {

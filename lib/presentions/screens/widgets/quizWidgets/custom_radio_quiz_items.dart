@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_text_styles.dart';
 
-import '../constants/app_colors.dart';
+import '../../constants/app_colors.dart';
 
 class Custom_radio_quiz extends StatelessWidget {
   const Custom_radio_quiz({
@@ -24,7 +24,8 @@ class Custom_radio_quiz extends StatelessWidget {
         width: double.infinity,
         height: 40,
         decoration: BoxDecoration(
-          color: AppColors.white,
+          color: isSelected==true?AppColors.backgroundScaffold.withAlpha(20):
+          AppColors.white,
           borderRadius: BorderRadius.circular(30),
       
         ),

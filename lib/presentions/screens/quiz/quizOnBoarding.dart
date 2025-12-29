@@ -3,11 +3,11 @@ import 'package:saferoadbeta/controller/qonBoardingcontrol.dart';
 import 'package:saferoadbeta/core/resources/appStrings.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_colors.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_text_styles.dart';
-import 'package:saferoadbeta/presentions/screens/pages/quizpage.dart';
+import 'package:saferoadbeta/presentions/screens/quiz/quiz_screen.dart';
 
 
 
-import '../widgets/custombuttonQuiz.dart';
+import '../widgets/quizWidgets/custombuttonQuiz.dart';
 
 class Quizonboarding extends StatelessWidget {
   const Quizonboarding({super.key});
@@ -29,7 +29,7 @@ class Quizonboarding extends StatelessWidget {
             Image.asset("assets/images/drivingTest.png",height: 400,width: 200,),
             SizedBox(height: 10,),
             custombuttonquiz(onPressed: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=> const QuizPage()));
+              Navigator.push(context,MaterialPageRoute(builder: (context)=> const QuizScreen()));
 
 
             }

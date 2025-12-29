@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:saferoadbeta/core/quizQuestions/quizQuestions.dart';
-import 'package:saferoadbeta/presentions/screens/widgets/custom_radio_quiz_items.dart';
+import 'package:saferoadbeta/controller/quizQuestions.dart';
+import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_navigation_button.dart';
+import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_radio_quiz_items.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
 
-import '../widgets/custom_question_title.dart';
-import '../widgets/custum_listview_options_quiz_screen.dart';
-import '../widgets/quiz_circleindicator.dart';
+import '../widgets/quizWidgets/custom_question_title.dart';
+import '../widgets/quizWidgets/custum_listview_options_quiz_screen.dart';
+import '../widgets/quizWidgets/quiz_circleindicator.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -46,7 +47,7 @@ late QuizScreenController _quizScreenController;
       Navigator.pop(context);
     },  child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(children: [Icon(Icons.arrow_back_ios,color: Colors.white,), Text("السابق",style: AppTextStyles.bodyMed,)],),
+          child: Row(children: [Icon(Icons.arrow_back_ios,color:AppColors.white,), Text("السابق",style: AppTextStyles.bodyMed,)],),
         ),
         ),
           title: Text('السؤال $currentq من $totalq',style: AppTextStyles.bodyLarge, ),
@@ -93,6 +94,12 @@ late QuizScreenController _quizScreenController;
           ),
         ),
       ),
+      bottomNavigationBar:
+      CustomNavigationButton(
+
+          onPressed: (){},
+          isActiveOutputStream:_quizScreenController.isActiveOutputStream ),
+
     );
   }
 }

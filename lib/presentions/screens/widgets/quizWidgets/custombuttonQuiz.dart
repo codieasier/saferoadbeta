@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../core/resources/appStrings.dart';
-import '../constants/app_colors.dart';
-import '../constants/app_text_styles.dart';
+import '../../../../core/resources/appStrings.dart';
+import '../../constants/app_colors.dart';
+import '../../constants/app_text_styles.dart';
 
 class custombuttonquiz extends StatelessWidget {
   const custombuttonquiz({

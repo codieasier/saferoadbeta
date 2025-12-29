@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:saferoadbeta/presentions/screens/pages/homePage.dart';
 import 'package:saferoadbeta/presentions/screens/pages/onBoarding.dart';
-import 'package:saferoadbeta/presentions/screens/pages/quizOnBoarding.dart';
-import 'package:saferoadbeta/presentions/screens/pages/quiz_screen.dart';
-import 'package:saferoadbeta/presentions/screens/pages/quizpage.dart';
+import 'package:saferoadbeta/presentions/screens/quiz/quizOnBoarding.dart';
+import 'package:saferoadbeta/presentions/screens/quiz/quiz_screen.dart';
 import 'package:saferoadbeta/presentions/screens/pages/signIn.dart';
 import 'package:saferoadbeta/presentions/screens/pages/signUp.dart';
 

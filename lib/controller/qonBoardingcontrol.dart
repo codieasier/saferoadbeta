@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:saferoadbeta/presentions/screens/quiz/quiz_screen.dart';
 
-import '../presentions/screens/pages/quizpage.dart';
 
 class QonBoardingcontrol{
 
   static void goToQuizHome(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (context)=> const QuizPage()));
+    Navigator.push(context,MaterialPageRoute(builder: (context)=> const QuizScreen()));
 
   }
 

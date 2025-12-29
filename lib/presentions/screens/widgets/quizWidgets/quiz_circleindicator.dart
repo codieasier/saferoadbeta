@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-import '../constants/app_colors.dart';
+import '../../constants/app_colors.dart';
 
 class CustomCirclePercentIndicator extends StatelessWidget {
   const CustomCirclePercentIndicator({

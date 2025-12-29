@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_colors.dart';
 import 'package:saferoadbeta/presentions/screens/constants/app_text_styles.dart';
-import 'package:saferoadbeta/presentions/screens/pages/quizOnBoarding.dart';
+import 'package:saferoadbeta/presentions/screens/quiz/quizOnBoarding.dart';
 import 'package:saferoadbeta/presentions/screens/pages/settingspage.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/card.dart';
 
