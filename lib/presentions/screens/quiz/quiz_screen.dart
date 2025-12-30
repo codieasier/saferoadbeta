@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:saferoadbeta/controller/quiz_controller.dart';
 import 'package:saferoadbeta/core/resources/appStrings.dart';
+import 'package:saferoadbeta/core/resources/const_values.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_navigation_button.dart';
 import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_radio_quiz_items.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
 
-import '../widgets/quizWidgets/custom_question_title.dart';
+import '../widgets/quizWidgets/custom_question.dart';
 import '../widgets/quizWidgets/custum_listview_options_quiz_screen.dart';
 import '../widgets/quizWidgets/quiz_circleindicator.dart';
 
@@ -48,10 +49,10 @@ late QuizScreenController _quizScreenController;
       Navigator.pop(context);
     },  child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(children: [Icon(Icons.arrow_back_ios,color:AppColors.white,), Text("السابق",style: AppTextStyles.bodyMed,)],),
+          child: Row(children: [Icon(Icons.arrow_back_ios,color:AppColors.white,), Text("الخروج",style: AppTextStyles.bodyMed,)],),
         ),
         ),
-          title: Text(StringsValues.page+currentq.toString()+StringsValues.from+totalq.toString(),style: AppTextStyles.bodyLarge, ),
+          title: Text((_quizScreenController.thisQuestion+1).toString()+'/'+_quizScreenController.countQuestion.toString(),style: AppTextStyles.bodyLarge, ),
           centerTitle: true,
           backgroundColor:AppColors.backgroundScaffold ,
 
@@ -69,8 +70,8 @@ late QuizScreenController _quizScreenController;
                   clipBehavior: Clip.none,
                   children: [
             
-                    CustomQuestionTitle(textquestion: ' ماذا تعني هذه العلامة؟ش',
-                    imagePath: 'assets/images/trafficSigns/stop.png',)
+                    CustomQuestionTitle(textquestion: ConstValues.questionsList[_quizScreenController.thisQuestion].question.textquestion,
+                    imagePath: ConstValues.questionsList[_quizScreenController.thisQuestion].question.imagePath,)
                     ,const  Positioned(
                       right: 0,
                         left: 0,
@@ -86,8 +87,8 @@ late QuizScreenController _quizScreenController;
                     _quizScreenController.onTapAtItemRadio(indexValue);
                   },
                   outputdataGroupValueRadio:  _quizScreenController.outputDataGroupValueIndex,
-                  itemCount: _quizScreenController.option.length,
-                  option:_quizScreenController.option , )
+                  itemCount: ConstValues.questionsList[_quizScreenController.thisQuestion].listAnswers.length,
+                  option:ConstValues.questionsList[_quizScreenController.thisQuestion].listAnswers , )
 
             
             

@@ -1,10 +1,12 @@
+import 'package:saferoadbeta/presentions/screens/widgets/quizWidgets/custom_question.dart';
+
 class QuestionModel{
 
- late String _question ;
+ late CustomQuestionTitle _question ;
   late List<dynamic> _listAnswers =[];
   dynamic _correctAnswer;
   QuestionModel(
-      {required String question, required List<dynamic> listAnswers, required correctAnswer })
+      {required CustomQuestionTitle question, required List<dynamic> listAnswers, required correctAnswer })
   {
     _question=question;
     _listAnswers=listAnswers;
@@ -17,9 +19,9 @@ class QuestionModel{
     _listAnswers = value;
   }
 
-  String get question => _question;
+  CustomQuestionTitle get question => _question;
 
-  set question(String value) {
+  set question(CustomQuestionTitle value) {
     _question = value;
   }
 

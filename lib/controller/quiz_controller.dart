@@ -1,10 +1,11 @@
 import 'dart:async';
 
-class QuizScreenController {
-  List<String> option=[
-    'توقف','استمر ببطىء', 'توقف عند إشارة المرور القادمة', 'توقف لركن السيارة'
+import 'package:saferoadbeta/core/resources/const_values.dart';
 
-  ];
+class QuizScreenController {
+
+ late int countQuestion;
+  int thisQuestion=0;
   int groupValueindex=-1;
  late StreamController<int>streamControllergroupValueIndex;
  late Sink<int>inputDataGroupValueIndex;
@@ -15,6 +16,7 @@ class QuizScreenController {
  late Stream<bool> isActiveOutputStream;
 
  QuizScreenController(){
+   countQuestion=ConstValues.questionsList.length;
    streamControllergroupValueIndex=StreamController();
    inputDataGroupValueIndex=streamControllergroupValueIndex.sink;
    outputDataGroupValueIndex=streamControllergroupValueIndex.stream.asBroadcastStream();

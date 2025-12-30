@@ -12,7 +12,7 @@ class custon_Listview_options extends StatelessWidget {
     required this.option,
     required this.outputdataGroupValueRadio, required this.onTap,
   }) ;
-final List<String> option;
+final List<dynamic> option;
 final int itemCount;
 final Stream<int> outputdataGroupValueRadio;
 final void Function(int indexValue)onTap;
